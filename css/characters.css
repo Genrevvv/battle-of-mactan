@@ -1,0 +1,47 @@
+
+
+#cards-container {
+    position: relative;
+    gap: 0.5rem;
+}
+
+.card {
+    background-color: #474747;
+    width: 20rem;
+    height: 25rem;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+
+    position: absolute;
+    left: calc(50% - 10rem);
+    transition: 0.5s    ;
+}
+
+.card p {
+    text-align: center; 
+}
+
+#prev, #next {
+    position: absolute;
+    top: 45%;
+    font-size: x-large;
+    z-index: 2;
+}
+
+#prev {
+    left: 5%;
+}
+
+#next {
+    right: 5%;
+}
+
+#prev:hover, #next:hover {
+    cursor: pointer;
+}
