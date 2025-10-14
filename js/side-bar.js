@@ -1,4 +1,4 @@
-import { initializeCards } from "./characters.js";
+import { initializeCards } from "./carousel.js";
 
 /*
     Pede pa to i-refactor later, 
@@ -11,7 +11,11 @@ const characters = document.getElementById('characters');
 const temp = document.getElementById('temp');
 const aboutUs = document.getElementById('about-us');
 
+const characterPreview = document.getElementById('character-preview');
+
 mainStory.onclick = () => {
+    characterPreview.innerHTML = '';
+
     const mainStoryContainer = document.getElementById('main-story-container');
     if (mainStoryContainer !== null) {
         mainStoryContainer.style.animation = 'fadeOut 0.5s ease';
@@ -31,6 +35,8 @@ mainStory.onclick = () => {
 }
 
 characters.onclick = () => {
+    characterPreview.innerHTML = '';
+
     const charactersContainer = document.getElementById('characters-container');
 
     if (charactersContainer !== null) {
@@ -52,6 +58,8 @@ characters.onclick = () => {
 }
 
 temp.onclick = () => {
+    characterPreview.innerHTML = '';
+
     const tempContainer = document.getElementById('temp-container');
     if (tempContainer !== null) {
         tempContainer.style.animation = 'fadeOut 0.5s ease';
@@ -71,6 +79,9 @@ temp.onclick = () => {
 }
 
 aboutUs.onclick = () => {
+    characterPreview.innerHTML = '';
+
+
     const aboutUsContainer = document.getElementById('about-us-container');
     if (aboutUsContainer !== null) {
         aboutUsContainer.style.animation = 'fadeOut 0.5s ease';
