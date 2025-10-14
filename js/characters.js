@@ -16,8 +16,14 @@ function createCard(trigger, cardData) {
                                         </div>
                                       </div>`;
 
+        characterPreview.style.backgroundColor = '#00000075';
+        characterPreview.style.zIndex = 2;
+
         const closeButton = document.getElementById('close-display');
         closeButton.onclick = () => {
+            characterPreview.style.backgroundColor = 'transparent';
+            characterPreview.style.zIndex = 1;
+            
             const characterDisplay = document.getElementById('character-display');
             characterDisplay.style.animation = 'fadeOutCenter 0.5s ease';
             
