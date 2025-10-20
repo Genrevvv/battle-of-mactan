@@ -4,6 +4,8 @@
 }
 
 .card {
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: #474747;
     width: 20rem;
     height: 25rem;

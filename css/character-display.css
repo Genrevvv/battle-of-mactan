@@ -67,3 +67,8 @@
     letter-spacing: 1.5px;
     line-height: 1.2;
 }
+
+#card-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -11,6 +11,7 @@ function initializeCards() {
         card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `<p>${cards[i].content}</p>`;
+        card.style.backgroundImage = `url(${cards[i].backgroundImage})`;
 
         cardElements[i] = card;
         createCard(card, cards[i]);

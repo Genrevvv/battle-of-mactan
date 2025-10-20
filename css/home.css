@@ -1,5 +1,8 @@
 main {
     /* background-color: red; */
+    background-image: url('/assets/images/1920x1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -7,6 +10,7 @@ main {
 }
 
 .container {
+    /* visibility: hidden; */
     background-color: white;
     width: 70%;
     height: 90%;
