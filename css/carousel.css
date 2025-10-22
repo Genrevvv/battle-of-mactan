@@ -8,6 +8,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: #474747;
+
     width: 18rem;
     height: 25rem;
     color: white;
@@ -22,6 +23,8 @@
     position: absolute;
     left: calc(50% - 10rem);
     transition: 0.5s;
+
+    box-shadow: 10px 20px 35px #000000;
 }
 
 .card:hover {
