@@ -1,7 +1,7 @@
 #main-story-container, 
 #characters-container, 
 #about-us-container {
-    width: 80%;
+    width: 85%;
     animation: fadeIn 0.5s ease;
 }
 
@@ -11,3 +11,4 @@
     position: relative;
     padding: 0 0.5rem;
 }
+

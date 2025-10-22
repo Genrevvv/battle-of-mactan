@@ -1,0 +1,47 @@
+
+#main-story-container {
+    width: calc(85% - 1rem);
+    height: 100%;
+    padding-right: 1rem;
+    overflow-y: scroll;
+}
+
+#main-story-container h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+#main-story-container p {
+    font-size: 14px;
+    letter-spacing: 2;
+    line-height: 1.4;
+
+    padding: 0.5rem 0.7rem;
+    margin: 0;
+    border-radius: 1rem;
+
+    transition: 0.5s ease;
+}
+
+#main-story-container p:hover {
+    background-color: #080808;
+}
+
+#main-story-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#main-story-container::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 4px;
+}
+
+#main-story-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#main-story-container::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
