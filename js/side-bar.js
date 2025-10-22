@@ -14,6 +14,8 @@ const aboutUs = document.getElementById('about-us');
 const characterPreview = document.getElementById('character-preview');
 
 mainStory.onclick = () => {
+    highlightOption('main-story');
+
     characterPreview.innerHTML = '';
 
     const mainStoryContainer = document.getElementById('main-story-container');
@@ -34,11 +36,11 @@ mainStory.onclick = () => {
             contentPreview.innerHTML = html;
             initAudio();
         });
-
-    highlightOption('main-story');
 }
 
 characters.onclick = () => {
+    highlightOption('characters');
+
     characterPreview.innerHTML = '';
 
     const charactersContainer = document.getElementById('characters-container');
@@ -61,11 +63,11 @@ characters.onclick = () => {
 
             stopAndResetAudio();
         });
-
-    highlightOption('characters');
 }
 
 aboutUs.onclick = () => {
+    highlightOption('about-us');
+
     characterPreview.innerHTML = '';
 
 
@@ -87,16 +89,9 @@ aboutUs.onclick = () => {
 
             stopAndResetAudio();
         });
-    
-    highlightOption('about-us');
 }
 
 function highlightOption(option) {
-
-    const notSelectedBgColor = '#3b3b3b';
-    const notSelectedFontColor = '#9c9c9c';
-    const selectedBgColor = '#727272';
-    const selectedFontColor = '#dad9d9';
 
     const optionElements = [mainStory, characters, aboutUs];
 
@@ -116,13 +111,17 @@ function highlightOption(option) {
     }
 
     function setupColor(optionID, optionElement) {
-        if (optionElement.id === optionID) {
-            optionElement.style.backgroundColor = selectedBgColor;
-            optionElement.style.color = selectedFontColor;
+        if (!(optionElement.id === optionID)) {
+            optionElement.classList.remove('highlighted');
             return;
         }
 
-        optionElement.style.backgroundColor = notSelectedBgColor;
-        optionElement.style.color = notSelectedFontColor;
+        if (optionElement.classList.contains('highlighted')) {
+            optionElement.classList.remove('highlighted');
+            return;
+        }
+
+        optionElement.classList.add('highlighted');
+        
     }
 }
