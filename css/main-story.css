@@ -1,9 +1,10 @@
-
 #main-story-container {
     width: calc(85% - 1rem);
     height: 100%;
     padding-right: 1rem;
     overflow-y: scroll;
+
+    position: relative;
 }
 
 #main-story-container h1 {
@@ -29,19 +30,47 @@
 }
 
 #main-story-container::-webkit-scrollbar {
-  width: 8px;
-}
+    width: 8px;
+}   
 
 #main-story-container::-webkit-scrollbar-track {
-  background: #2c2c2c;
-  border-radius: 4px;
+    background: #2c2c2c;
+    border-radius: 4px;
 }
 
 #main-story-container::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+    background: #888;
+    border-radius: 4px;
 }
 
 #main-story-container::-webkit-scrollbar-thumb:hover {
-  background: #aaa;
+    background: #aaa;
+}
+
+#audio-options {
+    background-color: rgb(41, 41, 41);
+
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0.7rem 1rem;
+
+    border-radius: 1rem;
+
+    position: sticky;
+    top: 0.5rem;
+    left: 100%;
+
+    box-shadow: 0 0 10px 1px #000000;
+}
+
+#audio-options .option {
+    
+}
+
+#audio-options .option:hover {
+    cursor: pointer;
 }

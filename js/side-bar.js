@@ -1,4 +1,5 @@
 import { initializeCards } from "./carousel.js";
+import { initAudio } from "./audio-option.js";
 
 /*
     Pede pa to i-refactor later, 
@@ -30,6 +31,7 @@ mainStory.onclick = () => {
         .then(res => res.text())
         .then(html => {
             contentPreview.innerHTML = html;
+            initAudio();
         });
 }
 
