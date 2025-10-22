@@ -71,7 +71,13 @@
 }
 
 #card-image {
-    background-size: contain;
+    background-color: red;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+
+    width: 20rem;
+    height: 30rem;
     border-radius: 1rem;
+    overflow: hidden;
 }

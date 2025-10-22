@@ -7,11 +7,11 @@ function createCard(trigger, cardData) {
                                         <div class="header">   
                                             <i id="close-display" class="fa-solid fa-xmark"></i>
                                         </div> 
-                                        <h2>${cardData.content}</h2>
+                                        <h2>${cardData.name}</h2>
                                         <div class="content">
                                             <div id="card-image"></div>
                                             <div class="description">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequatur impedit aperiam. Eveniet assumenda quod esse at similique! Perspiciatis id maxime iusto? Explicabo, atque! Minima fuga facilis ipsa eius vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequatur impedit aperiam. Eveniet assumenda quod esse at similique! Perspiciatis id maxime iusto? Explicabo, atque! Minima fuga facilis ipsa eius vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequatur impedit aperiam. Eveniet assumenda quod esse at similique! Perspiciatis id maxime iusto? Explicabo, atque! Minima fuga facilis ipsa eius vero.
+                                                <p>${cardData.description}</p>
                                             </div>
                                         </div>
                                       </div>`;
