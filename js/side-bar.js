@@ -8,7 +8,6 @@ import { initializeCards } from "./carousel.js";
 const contentPreview = document.getElementById('content-preview');
 const mainStory = document.getElementById('main-story');
 const characters = document.getElementById('characters');
-const temp = document.getElementById('temp');
 const aboutUs = document.getElementById('about-us');
 
 const characterPreview = document.getElementById('character-preview');
@@ -54,27 +53,6 @@ characters.onclick = () => {
         .then(html => {
             contentPreview.innerHTML = html;
             initializeCards();
-        });
-}
-
-temp.onclick = () => {
-    characterPreview.innerHTML = '';
-
-    const tempContainer = document.getElementById('temp-container');
-    if (tempContainer !== null) {
-        tempContainer.style.animation = 'fadeOut 0.5s ease';
-
-        tempContainer.addEventListener('animationend', () => {
-            tempContainer.remove();
-        });
-        
-        return;
-    }
-
-    fetch('/html/temp.html')
-        .then(res => res.text())
-        .then(html => {
-            contentPreview.innerHTML = html;
         });
 }
 

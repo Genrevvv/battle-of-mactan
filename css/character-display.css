@@ -20,6 +20,8 @@
     border-radius: 1rem;
     z-index: 3;
 
+    box-shadow: 0 0 50px 10px #000000;
+
     animation: fadeInCenter 0.5s ease;
 }
 
