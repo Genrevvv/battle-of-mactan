@@ -106,7 +106,7 @@ function highlightOption(option) {
             optionElements.forEach(optionElement => setupColor('about-us', optionElement));
             break;
         default:
-            console.log('Option not found')
+            console.log('Option not found');
             break;
     }
 

@@ -1,10 +1,8 @@
-const recordingAudio = new Audio('/assets/audio/sample-audio.wav');
+const recordingAudio = new Audio('/assets/audio/battle-of-macatan-audio-recording.mp3');
 
 function initAudio() {
-    console.log("Audio initialized");
+    // console.log("Audio initialized");
 
-
-    const audioOptions = document.getElementById('audio-options');
     const playPauseButton = document.getElementById('play-pause-btn');
     const muteUnmuteButton = document.getElementById('mute-unmute-btn');
 
@@ -12,7 +10,7 @@ function initAudio() {
     recordingAudio.volume = 1;
 
     playPauseButton.onclick = () => {
-        console.log('play-pause was clicked');
+        // console.log('play-pause was clicked');
 
         if (playPauseButton.classList.contains('fa-play')) {
             playPauseButton.classList.remove('fa-play');
@@ -28,25 +26,44 @@ function initAudio() {
     }
 
     muteUnmuteButton.onclick = () => {
-        console.log('mute-unmute was clicked');
+        // console.log('mute-unmute was clicked');
 
         if (muteUnmuteButton.classList.contains('fa-volume-high')) {
             muteUnmuteButton.classList.remove('fa-volume-high');
-            muteUnmuteButton.classList.toggle('fa-volume-xmark');
+            muteUnmuteButton.classList.add('fa-volume-xmark');
             
             recordingAudio.volume = 0;
             return;
         }
 
         muteUnmuteButton.classList.remove('fa-volume-xmark');
-        muteUnmuteButton.classList.toggle('fa-volume-high');
+        muteUnmuteButton.classList.add('fa-volume-high');
         recordingAudio.volume = 1;
     }
 
+    // Play paragraph
+    document.getElementById('para-1').onclick = () => { playParagraph(0, playPauseButton) }
+    document.getElementById('para-2').onclick = () => { playParagraph(41, playPauseButton) }
+    document.getElementById('para-3').onclick = () => { playParagraph(92, playPauseButton) }
+    document.getElementById('para-4').onclick = () => { playParagraph(167, playPauseButton) }
+    document.getElementById('para-5').onclick = () => { playParagraph(202, playPauseButton) }
+    document.getElementById('para-6').onclick = () => { playParagraph(233, playPauseButton) }
+    document.getElementById('para-7').onclick = () => { playParagraph(243, playPauseButton) }
+    document.getElementById('para-8').onclick = () => { playParagraph(265, playPauseButton) }
+
+    // Change button display when audio completed playing
     recordingAudio.addEventListener('ended', () => {
         playPauseButton.classList.remove('fa-pause');
-        playPauseButton.classList.toggle('fa-play');
+        playPauseButton.classList.add('fa-play');
     });
+}
+
+function playParagraph(timeStamp, playPauseButton) {
+        playPauseButton.classList.remove('fa-play');
+        playPauseButton.classList.add('fa-pause');
+
+        recordingAudio.currentTime = timeStamp; 
+        recordingAudio.play(); 
 }
 
 function stopAndResetAudio() {
