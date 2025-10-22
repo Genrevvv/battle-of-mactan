@@ -26,7 +26,7 @@
 }
 
 #main-story-container p:hover {
-    background-color: #080808;
+    background-color: var(--black1);
 }
 
 #main-story-container::-webkit-scrollbar {
@@ -34,21 +34,21 @@
 }   
 
 #main-story-container::-webkit-scrollbar-track {
-    background: #2c2c2c;
+    background: var(--dark-gray2);
     border-radius: 4px;
 }
 
 #main-story-container::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--gray1);
     border-radius: 4px;
 }
 
 #main-story-container::-webkit-scrollbar-thumb:hover {
-    background: #aaa;
+    background: var(--light-gray2);
 }
 
 #audio-options {
-    background-color: rgb(41, 41, 41);
+    background-color: var(--dark-gray2);
 
     width: 3rem;
     display: flex;
@@ -64,12 +64,12 @@
     top: 0.5rem;
     left: 100%;
 
-    box-shadow: 0 0 10px 1px #000000;
+    box-shadow: 0 0 10px 1px var(--black);
 }
 
-#audio-options .option {
-    /**/
-}
+/* #audio-options .option {
+
+} */
 
 #audio-options .option:hover {
     cursor: pointer;

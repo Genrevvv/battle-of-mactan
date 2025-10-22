@@ -1,3 +1,17 @@
+:root {
+    --light-gray1: #dfdfdf;
+    --light-gray2: #d9d9d9;
+
+    --gray1: #9c9c9c;
+    --gray2: #727272;
+
+    --dark-gray1: #3b3b3b;
+    --dark-gray2: #2c2c2c;
+
+    --black: #000000;
+    --black1: #1e1e1e;
+}
+
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;

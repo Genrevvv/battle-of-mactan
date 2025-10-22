@@ -7,7 +7,7 @@
 }   
 
 #character-display {
-    background-color: rgb(85, 85, 85);
+    background-color: var(--dark-gray1);
     width: 50rem;
     height: 35rem;
 
@@ -21,7 +21,7 @@
     z-index: 3;
     overflow: hidden;
     
-    box-shadow: 0 0 50px 10px #000000;
+    box-shadow: 0 0 50px 10px var(--black);
 
     animation: fadeInCenter 0.5s ease;
 }
@@ -34,7 +34,7 @@
 
 #character-display i {
     font-size: 1.5rem;
-    color: white;
+    color: var(--light-gray1);
 }
 
 #character-display i:hover {
@@ -45,12 +45,12 @@
     margin: 0;
     margin: 1rem;
     margin-top: 0;
-    color: white;
+    color: var(--light-gray1);
 }
 
 #character-display .content {
     /* background-color: red; */
-    color: #ffffff;
+    color: var(--light-gray1);
     width: 100%;
     height: 85%;
     display: grid;
@@ -61,17 +61,16 @@
 
 #character-display .content .description {
     /* background-color: yellow; */
-    color: white;
+    color: var(--light-gray1);
     letter-spacing: 1.5px;
     line-height: 1.2;
 }
 
 #card-image {
-    background-color: red;
     width: 20rem;
     height: 28rem;
     border-radius: 1rem;
     overflow: hidden;
 
-    box-shadow: 0 0 10px 1px #000000;
+    box-shadow: 0 0 10px 1px var(--black);
 }
