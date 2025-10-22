@@ -54,7 +54,7 @@ main {
 }
 
 #side-bar {
-    background-color: rgb(19, 19, 19);
+    background-color: #131313;
     width: 22%;
     height: 75%;
 
@@ -74,8 +74,8 @@ main {
 }
 
 #side-bar > .option {
-    background-color: rgb(59, 59, 59);
-    color: rgb(156, 156, 156);
+    background-color: #3b3b3b;
+    color: #9c9c9c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,8 +86,8 @@ main {
 }
 
 #side-bar > .option:hover {
-    background-color: rgb(90, 90, 90);
-    color: rgb(218, 217, 217);
+    background-color: #727272;
+    color: #dad9d9;
     cursor: pointer;
 
     box-shadow: 0 0 20px 7px rgb(12, 12, 12);

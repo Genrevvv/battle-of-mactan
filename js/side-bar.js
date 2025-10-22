@@ -34,6 +34,8 @@ mainStory.onclick = () => {
             contentPreview.innerHTML = html;
             initAudio();
         });
+
+    highlightOption('main-story');
 }
 
 characters.onclick = () => {
@@ -59,6 +61,8 @@ characters.onclick = () => {
 
             stopAndResetAudio();
         });
+
+    highlightOption('characters');
 }
 
 aboutUs.onclick = () => {
@@ -83,4 +87,42 @@ aboutUs.onclick = () => {
 
             stopAndResetAudio();
         });
+    
+    highlightOption('about-us');
+}
+
+function highlightOption(option) {
+
+    const notSelectedBgColor = '#3b3b3b';
+    const notSelectedFontColor = '#9c9c9c';
+    const selectedBgColor = '#727272';
+    const selectedFontColor = '#dad9d9';
+
+    const optionElements = [mainStory, characters, aboutUs];
+
+    switch (option) {
+        case 'main-story':
+            optionElements.forEach(optionElement => setupColor('main-story', optionElement));
+            break;
+        case 'characters':
+            optionElements.forEach(optionElement => setupColor('characters', optionElement));
+            break;
+        case 'about-us':
+            optionElements.forEach(optionElement => setupColor('about-us', optionElement));
+            break;
+        default:
+            console.log('Option not found')
+            break;
+    }
+
+    function setupColor(optionID, optionElement) {
+        if (optionElement.id === optionID) {
+            optionElement.style.backgroundColor = selectedBgColor;
+            optionElement.style.color = selectedFontColor;
+            return;
+        }
+
+        optionElement.style.backgroundColor = notSelectedBgColor;
+        optionElement.style.color = notSelectedFontColor;
+    }
 }
