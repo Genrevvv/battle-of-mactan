@@ -4,10 +4,11 @@
 }
 
 .card {
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
     background-color: #474747;
-    width: 20rem;
+    width: 18rem;
     height: 25rem;
     color: white;
 

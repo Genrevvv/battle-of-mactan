@@ -1,7 +1,8 @@
 main {
     /* background-color: red; */
-    background-image: url('/assets/images/1920x1280.jpg');
+    background-image: url('/assets/images/background.png');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100%;
     display: flex;
@@ -11,7 +12,7 @@ main {
 
 .container {
     /* visibility: hidden; */
-    background-color: white;
+    /* background-color: white; */
     width: 70%;
     height: 90%;
     
@@ -34,7 +35,8 @@ main {
 }
 
 #idle-animation {
-    background-color: rgb(190, 190, 190);
+    background-color: rgba(204, 204, 204);
+    opacity: 0.75;
     width: 100%;
     height: 100%;
 
