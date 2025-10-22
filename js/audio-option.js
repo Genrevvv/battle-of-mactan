@@ -42,14 +42,14 @@ function initAudio() {
     }
 
     // Play paragraph
-    document.getElementById('para-1').onclick = () => { playParagraph(0, playPauseButton) }
-    document.getElementById('para-2').onclick = () => { playParagraph(41, playPauseButton) }
-    document.getElementById('para-3').onclick = () => { playParagraph(92, playPauseButton) }
-    document.getElementById('para-4').onclick = () => { playParagraph(167, playPauseButton) }
-    document.getElementById('para-5').onclick = () => { playParagraph(202, playPauseButton) }
-    document.getElementById('para-6').onclick = () => { playParagraph(233, playPauseButton) }
-    document.getElementById('para-7').onclick = () => { playParagraph(243, playPauseButton) }
-    document.getElementById('para-8').onclick = () => { playParagraph(265, playPauseButton) }
+    document.getElementById('para-1').onclick = () => { playParagraph(0, playPauseButton) }     // 00:00
+    document.getElementById('para-2').onclick = () => { playParagraph(41, playPauseButton) }    // 00:41
+    document.getElementById('para-3').onclick = () => { playParagraph(92, playPauseButton) }    // 01:32
+    document.getElementById('para-4').onclick = () => { playParagraph(167, playPauseButton) }   // 02:47
+    document.getElementById('para-5').onclick = () => { playParagraph(202, playPauseButton) }   // 03:22
+    document.getElementById('para-6').onclick = () => { playParagraph(233, playPauseButton) }   // 03:50
+    document.getElementById('para-7').onclick = () => { playParagraph(243, playPauseButton) }   // 04:03
+    document.getElementById('para-8').onclick = () => { playParagraph(265, playPauseButton) }   // 04:25
 
     // Change button display when audio completed playing
     recordingAudio.addEventListener('ended', () => {
