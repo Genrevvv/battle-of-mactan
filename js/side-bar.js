@@ -1,5 +1,5 @@
 import { initializeCards } from "./carousel.js";
-import { initAudio } from "./audio-option.js";
+import { initAudio, stopAndResetAudio } from "./audio-option.js";
 
 /*
     Pede pa to i-refactor later, 
@@ -22,6 +22,7 @@ mainStory.onclick = () => {
 
         mainStoryContainer.addEventListener('animationend', () => {
             mainStoryContainer.remove();
+            stopAndResetAudio();
         });
         
         return;
@@ -55,6 +56,8 @@ characters.onclick = () => {
         .then(html => {
             contentPreview.innerHTML = html;
             initializeCards();
+
+            stopAndResetAudio();
         });
 }
 
@@ -77,5 +80,7 @@ aboutUs.onclick = () => {
         .then(res => res.text())
         .then(html => {
             contentPreview.innerHTML = html;
+
+            stopAndResetAudio();
         });
 }

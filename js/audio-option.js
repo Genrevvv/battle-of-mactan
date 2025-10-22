@@ -1,11 +1,15 @@
+const recordingAudio = new Audio('/assets/audio/sample-audio.wav');
+
 function initAudio() {
     console.log("Audio initialized");
 
-    const recordingAudio = new Audio('/assets/audio/sample-audio.wav');
 
     const audioOptions = document.getElementById('audio-options');
     const playPauseButton = document.getElementById('play-pause-btn');
     const muteUnmuteButton = document.getElementById('mute-unmute-btn');
+
+    recordingAudio.pause();
+    recordingAudio.volume = 1;
 
     playPauseButton.onclick = () => {
         console.log('play-pause was clicked');
@@ -45,4 +49,9 @@ function initAudio() {
     });
 }
 
-export { initAudio };
+function stopAndResetAudio() {
+    recordingAudio.pause();
+    recordingAudio.currentTime = 0;
+}
+
+export { initAudio, stopAndResetAudio };
