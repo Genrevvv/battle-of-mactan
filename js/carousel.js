@@ -10,8 +10,8 @@ function initializeCards() {
     for (let i = 0; i < cards.length; i++) {
         card = document.createElement('div');
         card.classList.add('card');
-        card.innerHTML = `<p></p>`;
-        card.style.backgroundImage = `url(${cards[i].backgroundImage})`;
+        card.innerHTML = `<img class="card-image" src="${cards[i].cardImage}">`;
+        // card.style.backgroundImage = `url()`;
 
         cardElements[i] = card;
         createCard(card, cards[i]);

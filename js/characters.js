@@ -9,7 +9,7 @@ function createCard(trigger, cardData) {
                                         </div> 
                                         <h2>${cardData.name}</h2>
                                         <div class="content">
-                                            <div id="card-image"></div>
+                                            <img id="card-image" src="${cardData.cardImage}"
                                             <div class="description">
                                                 <p>${cardData.description}</p>
                                             </div>
@@ -18,9 +18,6 @@ function createCard(trigger, cardData) {
 
         characterPreview.style.backgroundColor = '#00000075';
         characterPreview.style.zIndex = 2;
-
-        const cardImage = document.getElementById('card-image');
-        cardImage.style.backgroundImage = `url(${cardData.backgroundImage})`;
         
         const closeButton = document.getElementById('close-display');
         closeButton.onclick = () => {
