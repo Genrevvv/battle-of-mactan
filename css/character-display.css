@@ -7,7 +7,7 @@
 }   
 
 #character-display {
-    background-color: var(--dark-gray1);
+    background-color: var(--dark-gray3);
     width: 50rem;
     height: 35rem;
 
@@ -84,6 +84,7 @@
 }
 
 #card-image {
+    background-color: var(--dark-gray4);
     width: 20rem;
     height: 28rem;
     border-radius: 1rem;

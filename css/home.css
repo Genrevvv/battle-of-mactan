@@ -34,7 +34,7 @@ main {
 }
 
 #idle-animation {
-    background-color: var(--black1);
+    background-color: var(--dark-gray3);
     opacity: 0.75;
     width: 100%;
     height: 100%;

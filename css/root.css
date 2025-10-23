@@ -7,9 +7,13 @@
 
     --dark-gray1: #3b3b3b;
     --dark-gray2: #2c2c2c;
+    --dark-gray3: #2f2821;
+    --dark-gray4: #494949;
 
     --black: #000000;
     --black1: #1e1e1e;
+
+    --grayish-yellow1: #b6a458;
 }
 
 html, body {
