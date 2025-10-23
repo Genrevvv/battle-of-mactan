@@ -12,3 +12,14 @@
     padding: 0 0.5rem;
 }
 
+#about-us-container h1 {
+    font-size: 1.7em;
+}
+
+#about-us-container p {
+    font-size: 14px;
+    letter-spacing: 2;
+    line-height: 1.4;
+
+    padding: 0 1rem;
+}
