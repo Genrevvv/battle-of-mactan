@@ -50,10 +50,6 @@
     box-shadow: 0 0 10px 1px var(--black);
 }
 
-/* #audio-options .option {
-
-} */
-
 #audio-options .option:hover {
     cursor: pointer;
 }

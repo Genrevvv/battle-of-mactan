@@ -22,6 +22,10 @@ html, body {
     margin: 0;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 *::-webkit-scrollbar {
     width: 8px;
 }   
