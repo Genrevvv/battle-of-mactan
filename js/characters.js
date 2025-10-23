@@ -9,7 +9,7 @@ function createCard(trigger, cardData) {
                                         </div> 
                                         <h2>${cardData.name}</h2>
                                         <div class="content">
-                                            <img id="card-image" src="${cardData.cardImage}"
+                                            <img id="card-image" src="${cardData.characterImage}"
                                             <div class="description">
                                                 <p>${cardData.description}</p>
                                             </div>

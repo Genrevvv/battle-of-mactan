@@ -51,7 +51,10 @@ main {
 }
 
 #side-bar {
-    background-color: var(--black1);
+    /* background-color: var(--black1); */
+    background-image: url('/assets/images/button-parent.png');
+    background-size: cover;
+    
     width: 22%;
     height: 75%;
 
@@ -70,7 +73,7 @@ main {
 }
 
 #side-bar > .option {
-    background-color: var(--dark-gray1);
+    /* background-color: var(--dark-gray1); */
     color: var(--gray1);
     display: flex;
     justify-content: center;
@@ -79,17 +82,25 @@ main {
     user-select: none;
 
     transition: 0.4s ease;
+
+    overflow: hidden;
+    filter: brightness(0.5);
 }
 
 #side-bar > .option.highlighted {
-    background-color: var(--gray2);
     color: var(--light-gray1);
+    filter: brightness(1);
 }
 
 #side-bar > .option:hover {
-    background-color: var(--gray2);
     color: var(--light-gray1);
     cursor: pointer;
 
-    box-shadow: 0 0 20px 7px var(--black1);
+    filter: brightness(1);
+}
+
+.option img {
+    width: 100%;
+    margin: 0;
+    pad: 0;
 }
