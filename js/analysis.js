@@ -19,10 +19,17 @@ function initAnalysis() {
         question.onclick = () => {
             if (answer.style.display === 'none') {
                 answer.style.display = 'block';
+                
+                answer.classList.remove('close');
                 answer.classList.add('open');
             }
             else {
-                answer.style.display = 'none';
+                answer.classList.remove('open');
+                answer.classList.add('close');
+
+                setTimeout(() => {
+                    answer.style.display = 'none';
+                }, 450);
             }
         }        
     });

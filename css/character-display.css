@@ -35,10 +35,12 @@
 #character-display i {
     font-size: 1.5rem;
     color: var(--light-gray1);
+    margin-right: 0.5rem;
 }
 
 #character-display i:hover {
     cursor: pointer;
+    color: var(--gray1);
 }
 
 #character-display h2 {

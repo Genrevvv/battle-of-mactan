@@ -53,3 +53,14 @@
         max-height: 200px;
     }
 }
+
+@keyframes pullUp {
+    from {
+        opacity: 1;
+        max-height: 200px;
+    }
+    to {
+        max-height: 0;
+        opacity: 0;
+    }
+}
