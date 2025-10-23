@@ -28,17 +28,41 @@ function initializeCards() {
     const next = document.getElementById('next');
     const prev = document.getElementById('prev');
 
-    next.onclick = () => {
+    function nextCard() {
         active = active + 1 > cardElements.length - 1 ? active : active + 1;
         loadCards(cardElements, active);
+
+        return active;
+    }
+
+    function prevCard() {
+        active = active - 1 < 0 ? active : active - 1;
+        loadCards(cardElements, active);
+
+        return active;
+    }
+
+    next.onclick = () => {
+        active = nextCard();
     }
 
     prev.onclick = () => {
-        active = active - 1 < 0 ? active : active - 1;
-        loadCards(cardElements, active);
+        active = prevCard();
     }
-}
 
+    // Add scroll event handler
+    const charactersContainer = document.getElementById('characters-container');
+    charactersContainer.addEventListener('wheel', (e) => {
+        if (e.deltaY > 0) {
+            // console.log('scrolling down');
+            active = nextCard();
+        }
+        else {
+            // console.log('scrolling up');
+            active = prevCard();
+        }
+    });
+}
 
 function loadCards(cardElements, active) {
     let card = cardElements[active];
@@ -68,5 +92,8 @@ function loadCards(cardElements, active) {
     }
 }
 
+function sleep(ms) {
+  return new Promise(r => setTimeout(r, ms));
+}
 
 export { initializeCards };
