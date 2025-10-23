@@ -1,15 +1,11 @@
 import { initializeCards } from "./carousel.js";
 import { initAudio, stopAndResetAudio } from "./audio-option.js";
-
-/*
-    Pede pa to i-refactor later, 
-    ganyan lng muna para lng ma-test kung nagana haha
-*/
+import { initAnalysis } from "./analysis.js";
 
 const contentPreview = document.getElementById('content-preview');
 const mainStory = document.getElementById('main-story');
 const characters = document.getElementById('characters');
-const aboutUs = document.getElementById('about-us');
+const analysis = document.getElementById('analysis');
 
 const characterPreview = document.getElementById('character-preview');
 
@@ -65,35 +61,36 @@ characters.onclick = () => {
         });
 }
 
-aboutUs.onclick = () => {
-    highlightOption('about-us');
+analysis.onclick = () => {
+    highlightOption('analysis');
 
     characterPreview.innerHTML = '';
 
 
-    const aboutUsContainer = document.getElementById('about-us-container');
-    if (aboutUsContainer !== null) {
-        aboutUsContainer.style.animation = 'fadeOut 0.5s ease';
+    const analysisContainer = document.getElementById('analysis-container');
+    if (analysisContainer !== null) {
+        analysisContainer.style.animation = 'fadeOut 0.5s ease';
 
-        aboutUsContainer.addEventListener('animationend', () => {
-            aboutUsContainer.remove();
+        analysisContainer.addEventListener('animationend', () => {
+            analysisContainer.remove();
         });
         
         return;
     }
 
-    fetch('/html/about-us.html')
+    fetch('/html/analysis.html')
         .then(res => res.text())
         .then(html => {
             contentPreview.innerHTML = html;
 
+            initAnalysis();
             stopAndResetAudio();
         });
 }
 
 function highlightOption(option) {
 
-    const optionElements = [mainStory, characters, aboutUs];
+    const optionElements = [mainStory, characters, analysis];
 
     switch (option) {
         case 'main-story':
@@ -102,8 +99,8 @@ function highlightOption(option) {
         case 'characters':
             optionElements.forEach(optionElement => setupColor('characters', optionElement));
             break;
-        case 'about-us':
-            optionElements.forEach(optionElement => setupColor('about-us', optionElement));
+        case 'analysis':
+            optionElements.forEach(optionElement => setupColor('analysis', optionElement));
             break;
         default:
             console.log('Option not found');

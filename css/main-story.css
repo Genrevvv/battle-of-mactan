@@ -30,24 +30,6 @@
     cursor: pointer;
 }
 
-#main-story-container::-webkit-scrollbar {
-    width: 8px;
-}   
-
-#main-story-container::-webkit-scrollbar-track {
-    background: var(--dark-gray2);
-    border-radius: 4px;
-}
-
-#main-story-container::-webkit-scrollbar-thumb {
-    background: var(--gray1);
-    border-radius: 4px;
-}
-
-#main-story-container::-webkit-scrollbar-thumb:hover {
-    background: var(--light-gray2);
-}
-
 #audio-options {
     background-color: var(--dark-gray2);
 
