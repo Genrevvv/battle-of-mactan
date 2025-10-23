@@ -17,16 +17,11 @@ function initializeCards() {
         createCard(card, cards[i]);
 
         cardsContainer.appendChild(card);
-        console.log(cards[i].content);
     }   
 
     // Set middle element as active
     let middleCard = Math.round((cardElements.length - 1) / 2);
     let active = middleCard;
-
-    console.log(cardElements.length);
-    console.log(middleCard);
-    console.log(cardElements[middleCard].innerHTML);
 
     loadCards(cardElements, active);
 
@@ -70,8 +65,6 @@ function loadCards(cardElements, active) {
         cardElements[i].style.transform = `translateX(${-100 * n}px) scale(${1 - 0.2*n})`;
         cardElements[i].style.zIndex = -n;
         cardElements[i].style.opacity = n > 2 ?  0 : 0.6;
-
-        console.log(cardElements[i].innerHTML);
     }
 }
 
