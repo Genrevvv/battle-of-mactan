@@ -1,4 +1,4 @@
-const recordingAudio = new Audio('assets/audio/battle-of-macatan-audio-recording.mp3');
+const recordingAudio = new Audio('assets/audio/battle-of-macatan-audio-recording.MP3');
 
 function initAudio() {
     // console.log("Audio initialized");
