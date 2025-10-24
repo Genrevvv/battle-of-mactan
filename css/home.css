@@ -1,5 +1,5 @@
 main {
-    background-image: url('/assets/images/background.png');
+    background-image: url('../assets/images/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ main {
 
 #side-bar {
     /* background-color: var(--black1); */
-    background-image: url('/assets/images/button-parent.png');
+    background-image: url('../assets/images/button-parent.png');
     background-size: cover;
     
     width: 22%;
