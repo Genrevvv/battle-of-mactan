@@ -26,7 +26,7 @@ mainStory.onclick = () => {
         return;
     }
 
-    fetch('/html/main-story.html')
+    fetch('html/main-story.html')
         .then(res => res.text())
         .then(html => {
             contentPreview.innerHTML = html;
@@ -51,7 +51,7 @@ characters.onclick = () => {
         return;
     }
 
-    fetch('/html/characters.html')
+    fetch('html/characters.html')
         .then(res => res.text())
         .then(html => {
             contentPreview.innerHTML = html;
@@ -78,7 +78,7 @@ analysis.onclick = () => {
         return;
     }
 
-    fetch('/html/analysis.html')
+    fetch('html/analysis.html')
         .then(res => res.text())
         .then(html => {
             contentPreview.innerHTML = html;
